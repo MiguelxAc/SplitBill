@@ -1,35 +1,50 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# 📱 Splitbill — Kotlin Multiplatform (KMP) App
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
-
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-### Build and Run Android Application
-
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
+**Splitbill** es una aplicación móvil diseñada para calcular propinas y dividir cuentas de forma rápida y eficiente. Lo más destacado de este proyecto es que está construido bajo la arquitectura **Kotlin Multiplatform (KMP)**, compartiendo la lógica de negocio central entre **Android** e **iOS** de forma nativa.
 
 ---
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## 📸 Capturas de Pantalla (iOS Simulator)
+
+<p align="center">
+  <img src="RUTA_DE_TU_IMAGEN_1.png" width="30%" alt="Home Screen"/>
+  <img src="RUTA_DE_TU_IMAGEN_2.png" width="30%" alt="App Interface"/>
+</p>
+
+> *Nota: Reemplaza `RUTA_DE_TU_IMAGEN_X.png` por las rutas de tus capturas en el repositorio (por ejemplo, puedes crear una carpeta llamada `screenshots`).*
+
+---
+
+## 🛠️ Stack Tecnológico & Arquitectura
+
+* **Core:** Kotlin Multiplatform (KMP)
+* **Android UI:** Jetpack Compose
+* **iOS UI:** Compose Multiplatform / SwiftUI
+* **Entorno de compilación:** Gradle + Xcode (enlace nativo mediante arquitectura `arm64` Apple Silicon)
+
+---
+
+## 🚀 Desafíos Técnicos Superados
+
+Durante el desarrollo de este proyecto, se implementaron soluciones avanzadas de configuración de entorno, tales como:
+1. **Sincronización de Entornos:** Configuración del entorno de ejecución de Java (JVM 11+) compartida entre Android Studio y los scripts de ejecución en segundo plano de Xcode (`PhaseScriptExecution`).
+2. **Compatibilidad de Arquitecturas:** Resolución de conflictos de enlazado de plataformas forzando la compilación nativa para simuladores en chips Apple Silicon.
+
+---
+
+## ⚙️ Requisitos de Instalación
+
+Para replicar y compilar este proyecto localmente, te sugiero contar con el siguiente entorno:
+
+* **Sistema Operativo:** macOS 15.6 o superior (Recomendado para la simulación nativa de iOS).
+* **IDE:** Android Studio (última versión) con el plugin de Kotlin Multiplatform instalado.
+* **Xcode:** Versión 15+ (con soporte para el SDK de iOS correspondiente).
+* **Java:** JDK 17 o superior configurado tanto en el sistema como en el entorno de Gradle.
+
+### Pasos rápidos:
+1. Clona el repositorio: `git clone https://github.com/tu-usuario/Splitbill.git`
+2. Abre el proyecto raíz en Android Studio.
+3. Deja que Gradle sincronice los archivos.
+4. Para limpiar cualquier caché previa, ejecuta en la terminal de la raíz:
+```bash
+   ./gradlew clean
