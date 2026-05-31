@@ -7,8 +7,8 @@
 ## 📸 Capturas de Pantalla (iOS Simulator)
 
 <p align="center">
-  <img src="RUTA_DE_TU_IMAGEN_1.png" width="30%" alt="Home Screen"/>
-  <img src="RUTA_DE_TU_IMAGEN_2.png" width="30%" alt="App Interface"/>
+  <img src="/Users/miguelarce/Documents/screenshots" width="30%" alt="Home Screen"/>
+  <img src="R/Users/miguelarce/Documents/screenshots" width="30%" alt="App Interface"/>
 </p>
 
 > *Nota: Reemplaza `RUTA_DE_TU_IMAGEN_X.png` por las rutas de tus capturas en el repositorio (por ejemplo, puedes crear una carpeta llamada `screenshots`).*
