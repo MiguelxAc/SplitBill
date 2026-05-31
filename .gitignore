@@ -17,3 +17,48 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 node_modules/
+
+
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android Studio
+.idea/
+*.iml
+
+# Kotlin
+.kotlin/
+
+# Android SDK local
+local.properties
+
+# macOS
+.DS_Store
+
+# Xcode
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Logs
+*.log
+
+# Archivos temporales
+captures/
+.externalNativeBuild/
+
+# Keystores
+*.jks
+*.keystore
+
+# Variables de entorno
+.env
+.env.*
+
+
